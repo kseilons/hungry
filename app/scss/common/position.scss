@@ -1,0 +1,50 @@
+.position {
+    @include grid_row();
+    margin-bottom: -20px;
+}
+.position__item {
+    $grid: (gap: 2% null 2%);
+    @include grid_col((xs: 12, md:6, xl: 4), $grid);
+    margin-bottom: 20px;
+    animation: fadeIn;
+    animation-duration: .5s;
+}
+
+.position__flex {
+    justify-content: space-between;
+    display: flex;
+}
+
+.position__name,
+.position__price {
+    text-transform: uppercase;
+    font-family: 'Baloo Bhai 2';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    color: #333333;
+    
+    @media (max-width: $breakpoint-lg) {
+        @include adaptiv-font(18, 16);
+    }
+}
+
+.position__name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.position__price {
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.position__description {
+    font-size: 12px;
+    line-height: 1.5;
+    
+    color: rgba(51, 51, 51, 0.5);
+    @media (max-width: $breakpoint-lg) {
+        @include adaptiv-font(12, 11);
+    }
+}

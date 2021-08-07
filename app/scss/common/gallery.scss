@@ -1,0 +1,14 @@
+.gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery__item {
+    flex: 0 0 25%;
+    @media (max-width: $breakpoint-md) {
+        flex: 0 0 50%;
+    }
+}
+
+.gallery__img {
+    width: 100%;
+}

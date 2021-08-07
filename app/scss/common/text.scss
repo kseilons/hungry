@@ -1,0 +1,19 @@
+
+.text--caption {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    line-height: 14px;
+    letter-spacing: 0.5em;
+}
+.text--vertical {
+    text-align: center;
+    @media (min-width:$breakpoint-md) {
+        writing-mode:vertical-lr;
+        transform: rotate(180deg);
+    }
+}
+
+.text--bold {
+    font-weight: bold;
+}

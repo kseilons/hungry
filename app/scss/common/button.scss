@@ -1,0 +1,72 @@
+.button {
+    text-transform: uppercase;
+    background-color: initial;
+    border: none;
+    cursor: pointer;  
+    border-radius: $border-radius-m;
+    transition: background-color .15s ease-in, color .15s ease-in;
+    min-height: 60px;
+    padding: 10px 15px;
+    
+    @media (max-width: $breakpoint-lg) {
+        min-height: 50px;
+    }
+    @media (max-width:$breakpoint-sm) {
+        width: 100%;
+    }
+}
+
+.button--down {
+    & img {
+        transition: transform .2s linear;
+    }
+    &:hover  img{
+        transform: scale(1.1);
+    }
+    @media (max-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+.button--size-m {
+    margin: 0 20px;
+    min-width: 200px;
+
+    @media (max-width: $breakpoint-lg) {
+        min-width: 175px;
+    }
+    @media (max-width:$breakpoint-sm) {
+        margin: 5px 0;
+    }
+}
+
+.button--size-xl {
+    margin: 5px;
+    width: 100%;
+    
+}
+
+.button__container {
+    margin-bottom: 82px;
+    @media (max-width:$breakpoint-md) {
+        margin-bottom: 15px;
+    }
+}
+.button--primary {
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+        background-color: darken($primary, 10%);
+    }
+}
+
+.button--transparent {
+    background-color: none;
+    color: $white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    &:hover {
+        color: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+}

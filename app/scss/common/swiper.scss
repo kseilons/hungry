@@ -1,0 +1,29 @@
+.swiper-pagination {
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+    @media (max-width: $breakpoint-sm) {
+        bottom: 25px;
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba($white, 0.5);
+    opacity: 1;
+    &:hover {
+        background-color: $white;
+    }
+}
+.swiper-pagination-bullet+.swiper-pagination-bullet {
+    margin-left: 20px;
+}
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+}

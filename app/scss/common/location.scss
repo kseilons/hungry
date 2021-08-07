@@ -1,0 +1,6 @@
+.location {
+    height:475px;
+    @media (max-width: $breakpoint-sm) {
+        height: 350px;
+    }
+}

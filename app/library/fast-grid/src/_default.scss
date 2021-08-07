@@ -1,0 +1,15 @@
+$grid: (
+  breakpoints: (
+    xs: 0px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+  ),
+  columns: 12,
+  gap: 10px,
+  container: 15px,
+  box-sizing: border-box,
+  mode: flex
+);

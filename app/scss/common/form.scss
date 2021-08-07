@@ -1,0 +1,95 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px 18px -5px -5px;
+    @media (max-width: $breakpoint-md) {
+        margin: 10px -5px -5px -5px;
+    }
+}
+
+.form__input {
+    height: 60px;
+    width: 100%;
+    @media (max-width: $breakpoint-md) {
+        height: 50px;
+    }
+}
+
+
+.form__group {
+    display: inline-block;
+    padding: 5px;
+    flex: 0 0 50%;
+    position: relative;
+
+    @media (max-width: $breakpoint-md) {
+        flex: 0 0 100%;
+    }
+}
+
+.form__group--col-3 {
+    flex:  0 0 33.33333%;
+    @media (max-width: $breakpoint-md) {
+        flex: 0 0 100%;
+    }
+}
+.form__select {
+    width: 100%;
+    height: 100%;
+}
+
+.form__label {
+    position: absolute;
+    top: 35px;
+    left: 4px;
+    transform: translateY(-50%);
+    line-height: 19px;
+    text-indent: 20px;
+    color: rgba(51, 51, 51, 0.5);
+    transition: .2s ease-out;
+
+    @media (max-width: $breakpoint-md) {
+        top: 30px;
+    }
+}
+.form__label--active {
+    transform: scale(.9);
+    font-weight: bold;
+    top: -18px;
+    left: -5px;
+    color: #333;
+}
+
+.form__group--full {
+    flex: 0 0 100%;
+}
+
+.form__contact-info {
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    flex: 1 0 auto;
+    @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+
+.form__footer {
+    width: 100%;
+    display: flex;
+
+    @media (max-width: $breakpoint-xxl) {
+        flex-direction: column;
+        .form__contact-info {
+            margin-top: 10px;
+            order: 2;
+        }
+    }
+}
+
+.form__buton--footer {
+    margin: 5px;
+    flex: 0 1 50%;
+}
