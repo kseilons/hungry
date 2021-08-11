@@ -28,4 +28,40 @@ $(document).ready(function () {
         $($(this).attr('href')).addClass('tabs-content__item--active')
     });
     $('.tabs-trigers__link').click();
+
+    window.dispatchEvent(new Event("scroll"));
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;//текущая позиция скролла
+        let paralacsBlock = document.querySelector('.page__paralacs');
+        let scrollHeight = paralacsBlock.offsetHeight;
+        let percent = scrollTop / scrollHeight;
+        paralacsBlock.style.opacity = `${1 - percent }`;
+    });
+
+
+    function SmoothVerticalScrolling(e, time, where) {
+        var eTop = e.getBoundingClientRect().top;
+        var eAmt = eTop / 100;
+        var curTime = 0;
+        while (curTime <= time) {
+            window.setTimeout(SVS_B, curTime, eAmt, where);
+            curTime += time / 100;
+        }
+    }
+    
+    function SVS_B(eAmt, where) {
+        if (where == "center" || where == "")
+        window.scrollBy(0, eAmt / 2);
+        if (where == "top") {
+            window.scrollBy(0, eAmt);
+            console.log(eAmt)
+
+        }
+    }
+
+    $('.button--down').click( function() {
+        let mainPage = document.querySelector('.page__wrapper');
+        SmoothVerticalScrolling(mainPage, 500, "top")
+    })
 });

@@ -13,11 +13,28 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
+	position: relative;
+	z-index: 2;
+	background-color: #fff;
 }
 
+
 .page__header {
-	background: url('../images/header-bg.jpg') center / cover no-repeat;	
+	min-height: 100vh;
+	background-color: #000;
 }
+
+.page__paralacs {
+	background: url('../images/header-bg.jpg') center / cover no-repeat;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+
 .page__main {
 	flex: 1 0 auto;
 }
